@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h3>1) Faça um programa JavaScript que receba 3 números informados pelo usuário e em
+        seguida apresente uma mensagem de alerta(alert) informando qual é o maior número
+        dentre os números informados.
+    </h3>
+
+    <br>
+
+    <H2>Insira 3 numeros para que a maquina informar o maior deles:</H2>
+
+        <input id="num1" type="number">
+        <input id="num2" type="number">        
+        <input id="num3" type="number">
+
+        <button onclick="confirmar()">Confirmar!</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            function confirmar(){
+                var numero1 = Number(document.getElementById("num1").value);
+                var numero2 = Number(document.getElementById("num2").value);
+                var numero3 = Number(document.getElementById("num3").value);
+                var maior;
+            
+                if(numero1 >= numero2 && numero1 >= numero3){
+                    maior = numero1;
+                } else 
+                if (numero2 >= numero1 && numero2 >= numero3){
+                    maior = numero2;
+                } else {
+                    maior = numero3;
+                }
+
+                document.getElementById("resultado").textContent = "O maior numero é: " + maior;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h3>2) Faça um programa JavaScript em que o usuário informará a sua idade e o programa
+        emitirá uma mensagem(alert) dizendo se o usuário é ou não menor de idade.</h3>
+    <br>
+    <h2>Insira sua idade abaixo:</h2>
+        
+        <input id="idade" type="number">
+
+        <button onclick="validar_idade()">Confirmar!</button>
+
+        <p id="result"></p>
+        <p id="result2"></p>
+
+    <script>
+        function validar_idade(){
+            var usuarioIdade = Number(document.getElementById("idade").value);
+            var valorIdade
+
+            if(usuarioIdade >= 18){
+                valorIdade = ("Você é maior de idade!");
+            } else {
+                valorIdade = ("Você é menor de idade!");
+            }
+
+            document.getElementById("result").textContent = valorIdade;
+            document.getElementById("result2").textContent = usuarioIdade + " anos de idade.";
+        }
+    </script>
+</body>
+</html>
